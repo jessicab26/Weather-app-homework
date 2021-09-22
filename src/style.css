@@ -1,0 +1,197 @@
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #07014e,
+    #002d78,
+    #00569e,
+    #0080bf,
+    #00aadb,
+    #42bee7,
+    #66d3f3,
+    #86e7ff,
+    #b2eaff,
+    #d6efff,
+    #f0f5ff,
+    #ffffff
+  );
+}
+
+h1 {
+  font-family: "Bungee Inline", cursive;
+  margin-top: 20px;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+}
+h4 {
+  position: relative;
+  left: 0;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: black;
+  margin-top: 18px;
+  text-transform: capitalize;
+}
+h5 {
+  position: relative;
+  left: 0;
+  font-size: 15px;
+  color: black;
+  font-family: sans-serif;
+}
+
+.order {
+  position: sticky;
+  left: 0;
+  margin-bottom: -180px;
+  margin-left: 248px;
+  font-size: 15px;
+  color: black;
+  list-style-type: none;
+}
+.cityName {
+  position: fixed;
+  right: 0;
+  margin-right: 59px;
+  margin-top: 10px;
+  font-family: "Besley", serif;
+  font-weight: 400;
+  font-size: 34px;
+  font-weight: 600;
+  color: black;
+}
+.current {
+  position: fixed;
+  right: 0;
+  margin-right: 60px;
+  color: white;
+  font-size: 22px;
+}
+.day {
+  position: relative;
+  left: 0;
+  font-family: "Besley", serif;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 10px;
+}
+.cloud {
+  position: relative;
+  left: 0;
+  font-size: 50px;
+}
+.temp {
+  position: relative;
+  left: 0;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Besley", serif;
+  color: black;
+}
+.units {
+  position: relative;
+  left: -8px;
+  top: -20px;
+  font-size: 30px;
+  color: black;
+}
+.fancy {
+  position: relative;
+  left: 0;
+  font-size: 13px;
+  font-weight: 400;
+}
+.fancyTwo {
+  position: relative;
+  left: 0;
+  font-size: 10px;
+  font-weight: 400;
+  color: black;
+}
+.fancyThree {
+  position: relative;
+  left: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+}
+.location {
+  position: fixed;
+  right: 0;
+  margin-right: 67px;
+}
+.button {
+  position: fixed;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 150px;
+  background: navy;
+  color: white;
+}
+.buttonTwo {
+  position: fixed;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 68px;
+  background: green;
+  color: white;
+}
+.air {
+  margin: 5px;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+}
+.water {
+  margin: 5px;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+}
+.wind {
+  margin: 5px;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+}
+.hot {
+  position: relative;
+  top: 20;
+  font-size: 12px;
+}
+.rain {
+  position: relative;
+  top: -30;
+  font-size: 12px;
+}
+.gust {
+  position: relative;
+  left: 0;
+  font-size: 12px;
+}
+.week-days {
+  position: relative;
+  bottom: 0;
+  margin-top: 120px;
+  margin-right: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+}
+.week-days .emoji {
+  position: relative;
+  font-size: 35px;
+  text-align: center;
+  margin-left: 56px;
+}
+.week-days .degrees {
+  font-size: 15px;
+  color: black;
+}

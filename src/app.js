@@ -1,0 +1,103 @@
+let timeFrame = new Date();
+let h3 = document.querySelector("h3.day");
+let h5 = document.querySelector("h5");
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[timeFrame.getDay()];
+let hours = timeFrame.getHours();
+let minutes = timeFrame.getMinutes();
+let amPm = hours >= 12 ? `pm` : `am`;
+hours = hours % 12;
+hours = hours ? hours : 12;
+minutes = minutes < 10 ? `0` + minutes : minutes;
+
+h3.innerHTML = `${day}`;
+h5.innerHTML = hours + ":" + minutes + " " + amPm;
+
+function displayWeatherCondition(response) {
+  document.querySelector("#city-location").innerHTML = response.data.name;
+  document.querySelector("#new-temp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#downpour").innerHTML =
+    Math.round(response.data.main.feels_like) + "℉";
+  document.querySelector("#sweat").innerHTML =
+    Math.round(response.data.main.humidity) + "%";
+  document.querySelector("#blow").innerHTML =
+    Math.round(response.data.wind.speed) + "mph";
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#high").innerHTML =
+    Math.round(response.data.main.temp_max) + "℉";
+  document.querySelector("#low").innerHTML =
+    Math.round(response.data.main.temp_min) + "℉";
+}
+
+function searchCity(city) {
+  let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#submit-city").value;
+  searchCity(city);
+}
+
+let form = document.querySelector("#search-new-city");
+form.addEventListener("submit", handleSubmit);
+
+function research(event) {
+  event.preventDefault();
+  let researchInput = document.querySelector("#submit-city");
+
+  let p = document.querySelector("p");
+  p.innerHTML = `Now showing weather for....`;
+}
+let dorm = document.querySelector("#search-new-city");
+dorm.addEventListener("submit", research);
+
+function newTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#new-temp");
+  temperature.innerHTML = `26`;
+}
+let link = document.querySelector(".fancy");
+link.addEventListener("click", newTemp);
+
+function oldTemp(event) {
+  event.preventDefault();
+  let degrees = document.querySelector("#new-temp");
+  degrees.innerHTML = `80`;
+}
+let wink = document.querySelector(".fancyThree");
+wink.addEventListener("click", oldTemp);
+
+function searchLocation(position) {
+  let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  let researchInput = document.querySelector("#submit-city");
+
+  let p = document.querySelector("p");
+  p.innerHTML = `Currently in....`;
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+let currentLocationButton = document.querySelector("#current-area");
+currentLocationButton.addEventListener("click", getCurrentLocation);
+
+searchCity("New Orleans");
