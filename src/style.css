@@ -44,8 +44,8 @@ h5 {
 .order {
   position: sticky;
   left: 0;
-  margin-bottom: -180px;
-  margin-left: 248px;
+  margin-bottom: -176px;
+  margin-left: 270px;
   font-size: 15px;
   color: black;
   list-style-type: none;
@@ -84,7 +84,7 @@ h5 {
 .temp {
   position: relative;
   left: 0;
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 700;
   font-family: "Besley", serif;
   color: black;
@@ -92,8 +92,8 @@ h5 {
 .units {
   position: relative;
   left: -8px;
-  top: -20px;
-  font-size: 30px;
+  top: -25px;
+  font-size: 18px;
   color: black;
 }
 .fancy {
@@ -126,8 +126,8 @@ h5 {
   right: 0;
   margin-top: 10px;
   margin-right: 150px;
-  background: navy;
-  color: white;
+  background: yellow;
+  color: black;
 }
 .buttonTwo {
   position: fixed;
