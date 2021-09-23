@@ -197,8 +197,10 @@ h5 {
 }
 .name {
   color: black;
-  font-size: 15px;
+  font-size: 12px;
+  text-align: center;
 }
 .link {
-  font-size: 15px;
+  font-size: 12px;
+  text-align: center;
 }
