@@ -199,10 +199,10 @@ h5 {
   color: black;
   font-size: 12px;
   text-align: center;
-  margin-top: 20px;
+
+  padding-top: 70px;
 }
 .link {
   font-size: 12px;
   text-align: center;
-  margin-top: 20px;
 }
