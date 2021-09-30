@@ -37,7 +37,7 @@ minutes = minutes < 10 ? `0` + minutes : minutes;
 
 h3.innerHTML = `${day}`;
 h5.innerHTML = hours + ":" + minutes + " " + amPm;
-h4.innerHTML = month + number;
+h4.innerHTML = month + " " + number;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city-location").innerHTML = response.data.name;
