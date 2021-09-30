@@ -1,7 +1,9 @@
 let timeFrame = new Date();
 let h3 = document.querySelector("h3.day");
 let h5 = document.querySelector("h5");
-
+let h4 = document.querySelector("h4.month");
+let month = timeFrame.getMonth();
+let number = timeFrame.getDate();
 let days = [
   "Sunday",
   "Monday",
@@ -21,6 +23,7 @@ minutes = minutes < 10 ? `0` + minutes : minutes;
 
 h3.innerHTML = `${day}`;
 h5.innerHTML = hours + ":" + minutes + " " + amPm;
+h4.innerHTML = month + number;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city-location").innerHTML = response.data.name;
