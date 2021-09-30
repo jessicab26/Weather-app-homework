@@ -1,46 +1,46 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let h3 = document.querySelector("h3.day");
-  let h4 = document.querySelector("h4.month");
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = "0${minutes}";
-  }
-
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  let month = months[date.getMonth()];
-  let number = date.getDate();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
+let date = new Date();
+let h3 = document.querySelector("h3.day");
+let h4 = document.querySelector("h4.month");
+let h5 = document.querySelector("h5");
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
 }
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = "0${minutes}";
+}
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let month = months[date.getMonth()];
+let number = date.getDate();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[date.getDay()];
 
 h3.innerHTML = day;
 h4.innerHTML = month + " " + number;
+h5.innerHTML = hours + " " + minutes;
 
 function displayWeatherCondition(response) {
   document.querySelector("#city-location").innerHTML = response.data.name;
@@ -59,8 +59,7 @@ function displayWeatherCondition(response) {
     Math.round(response.data.main.temp_max) + "℉";
   document.querySelector("#low").innerHTML =
     Math.round(response.data.main.temp_min) + "℉";
-  document.querySelector("#time").innerHTML =
-    formatDate(response.data.dt) * 1000;
+  document.querySelector("#time").innerHTML = response.data.dt * 1000;
 }
 
 function searchCity(city) {
