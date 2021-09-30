@@ -4,7 +4,7 @@ h1 {
   font-size: 50px;
   text-align: center;
   margin-bottom: 25px;
-  color: black;
+  color: White;
 }
 h4 {
   position: relative;
@@ -116,7 +116,7 @@ h5 {
   right: 0;
   margin-top: 10px;
   margin-right: 150px;
-  background: navy;
+  background: #003149;
   color: white;
 }
 .buttonTwo {
