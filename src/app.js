@@ -1,5 +1,7 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
+  let h3 = document.querySelector("h3.day");
+  let h4 = document.querySelector("h4.month");
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -8,39 +10,36 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = "0${minutes}";
   }
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  let number = date.getDate();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
 }
 
-let timeFrame = new Date();
-let h3 = document.querySelector("h3.day");
-let h4 = document.querySelector("h4.month");
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-let month = months[timeFrame.getMonth()];
-let number = timeFrame.getDate();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[timeFrame.getDay()];
-
-h3.innerHTML = `${day}`;
+h3.innerHTML = day;
 h4.innerHTML = month + " " + number;
 
 function displayWeatherCondition(response) {
