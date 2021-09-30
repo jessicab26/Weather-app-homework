@@ -12,7 +12,6 @@ function formatDate(timestamp) {
 
 let timeFrame = new Date();
 let h3 = document.querySelector("h3.day");
-let h5 = document.querySelector("h5");
 let h4 = document.querySelector("h4.month");
 let months = [
   "January",
