@@ -1,3 +1,15 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = "0${minutes}";
+  }
+}
+
 let timeFrame = new Date();
 let h3 = document.querySelector("h3.day");
 let h5 = document.querySelector("h5");
@@ -28,15 +40,8 @@ let days = [
   "Saturday",
 ];
 let day = days[timeFrame.getDay()];
-let hours = timeFrame.getHours();
-let minutes = timeFrame.getMinutes();
-let amPm = hours >= 12 ? `pm` : `am`;
-hours = hours % 12;
-hours = hours ? hours : 12;
-minutes = minutes < 10 ? `0` + minutes : minutes;
 
 h3.innerHTML = `${day}`;
-h5.innerHTML = hours + ":" + minutes + " " + amPm;
 h4.innerHTML = month + " " + number;
 
 function displayWeatherCondition(response) {
@@ -56,6 +61,9 @@ function displayWeatherCondition(response) {
     Math.round(response.data.main.temp_max) + "℉";
   document.querySelector("#low").innerHTML =
     Math.round(response.data.main.temp_min) + "℉";
+  document.querySelector("#time").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 
 function searchCity(city) {
