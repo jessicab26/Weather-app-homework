@@ -12,7 +12,7 @@ h4 {
   font-size: 18px;
   font-family: sans-serif;
   color: black;
-  margin-top: 18px;
+  margin-top: 10px;
   text-transform: capitalize;
 }
 h5 {
@@ -29,6 +29,13 @@ h5 {
   border: 2px solid black;
   border-radius: 5px;
   background-color: #003149;
+}
+
+.month {
+  position: relative;
+  font-size: 15px;
+  font-family: sans-serif;
+  margin-top: 18px;
 }
 
 .order {
