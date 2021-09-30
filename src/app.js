@@ -60,9 +60,8 @@ function displayWeatherCondition(response) {
     Math.round(response.data.main.temp_max) + "℉";
   document.querySelector("#low").innerHTML =
     Math.round(response.data.main.temp_min) + "℉";
-  document.querySelector("#time").innerHTML = formatDate(
-    response.data.dt * 1000
-  );
+  document.querySelector("#time").innerHTML =
+    formatDate(response.data.dt) * 1000;
 }
 
 function searchCity(city) {
