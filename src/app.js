@@ -8,7 +8,7 @@ if (hours < 10) {
 }
 let minutes = date.getMinutes();
 if (minutes < 10) {
-  minutes = "0${minutes}";
+  minutes = `0${minutes}`;
 }
 
 let months = [
