@@ -28,7 +28,7 @@ h5 {
   padding: 30px;
   border: 2px solid black;
   border-radius: 5px;
-  background-color: #00a0f0;
+  background-color: #007ebd;
 }
 
 .month {
@@ -122,7 +122,7 @@ h5 {
   right: 0;
   margin-top: 10px;
   margin-right: 150px;
-  background: #00a0f0;
+  background: #007ebd;
   color: white;
 }
 .buttonTwo {
