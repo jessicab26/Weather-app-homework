@@ -93,7 +93,7 @@ h5 {
   font-size: 18px;
   color: black;
 }
-.fancy {
+#celsius {
   position: relative;
   left: 0;
   font-size: 13px;
@@ -106,7 +106,7 @@ h5 {
   font-weight: 400;
   color: black;
 }
-.fancyThree {
+#fahrenheit {
   position: relative;
   left: 0;
   font-size: 13px;
@@ -193,13 +193,4 @@ h5 {
 .active:hover {
   text-decoration: none;
   color: white;
-}
-
-.not-active {
-  color: white;
-  text-decoration: none;
-}
-.not-active:hover {
-  color: red;
-  text-decoration: underline;
 }

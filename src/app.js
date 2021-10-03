@@ -92,26 +92,30 @@ function research(event) {
 let dorm = document.querySelector("#search-new-city");
 dorm.addEventListener("submit", research);
 
-function newTemp(event) {
+function newCelsiusTemp(event) {
   event.preventDefault();
-  let celsiusClick = ((fahrenheitTemp - 32) * 5) / 9;
   let temperature = document.querySelector("#new-temp");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+  let celsiusClick = ((fahrenheitTemp - 32) * 5) / 9;
   temperature.innerHTML = Math.round(celsiusClick);
 }
 
-function oldTemp(event) {
+function oldFahrenheitTemp(event) {
   event.preventDefault();
   let temperature = document.querySelector("#new-temp");
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   temperature.innerHTML = Math.round(fahrenheitTemp);
 }
 
 let fahrenheitTemp = null;
 
-let celsiusLink = document.querySelector(".fancy");
-link.addEventListener("click", newTemp);
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", newCelsiusTemp);
 
-let fahrenheitLink = document.querySelector(".fancyThree");
-fahrenheitLink.addEventListener("click", oldTemp);
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", oldFahrenheitTemp);
 
 function searchLocation(position) {
   let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
