@@ -103,7 +103,7 @@ function oldTemp(event) {
   event.preventDefault();
   let fahrenheitClick = (14 * 9) / 5 + 32;
   let degrees = document.querySelector("#new-temp");
-  degrees.innerHTML = fahrenheitClick;
+  degrees.innerHTML = Math.round(fahrenheitClick);
 }
 let wink = document.querySelector(".fancyThree");
 wink.addEventListener("click", oldTemp);
