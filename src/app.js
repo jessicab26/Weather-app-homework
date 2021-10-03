@@ -107,11 +107,11 @@ function oldTemp(event) {
 
 let fahrenheitTemp = null;
 
-let link = document.querySelector(".fancy");
+let celsiusLink = document.querySelector(".fancy");
 link.addEventListener("click", newTemp);
 
-let wink = document.querySelector(".fancyThree");
-wink.addEventListener("click", oldTemp);
+let fahrenheitLink = document.querySelector(".fancyThree");
+fahrenheitLink.addEventListener("click", oldTemp);
 
 function searchLocation(position) {
   let apiKey = "dd7b4743f092d8d584d793818a1a33ef";

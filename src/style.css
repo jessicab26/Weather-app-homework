@@ -134,24 +134,7 @@ h5 {
   background: green;
   color: white;
 }
-.air {
-  margin: 5px;
-  font-size: 15px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: black;
-}
-.water {
-  margin: 5px;
-  font-size: 15px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: black;
-}
-.wind {
-  margin: 5px;
-  font-size: 15px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: black;
-}
+
 .hot {
   position: relative;
   top: 20;
@@ -200,4 +183,23 @@ h5 {
 .link {
   font-size: 12px;
   text-align: center;
+}
+
+.active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.not-active {
+  color: white;
+  text-decoration: none;
+}
+.not-active:hover {
+  color: red;
+  text-decoration: underline;
 }
