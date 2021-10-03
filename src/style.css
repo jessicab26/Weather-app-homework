@@ -193,3 +193,7 @@ h5 {
   text-decoration: none;
   color: white;
 }
+
+.not-active {
+  color: black;
+}
