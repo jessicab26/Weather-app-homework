@@ -44,6 +44,7 @@ h5.innerHTML = hours + " " + minutes;
 
 function displayWeatherCondition(response) {
   let icon = document.querySelector("#icon");
+  fahrenheitTemp = response.data.main.temp;
   document.querySelector("#city-location").innerHTML = response.data.name;
   document.querySelector("#new-temp").innerHTML = Math.round(
     response.data.main.temp
@@ -93,20 +94,14 @@ dorm.addEventListener("submit", research);
 
 function newTemp(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#new-temp");
-  temperature.innerHTML = `26`;
+  let celsiusClick = ((fahrenheitTemp - 32) * 5) / 9;
+  let celsiusTemp = document.querySelector("#new-temp");
+  celsiusTemp.innerHTML = Math.round(celsiusClick);
 }
 let link = document.querySelector(".fancy");
 link.addEventListener("click", newTemp);
 
-function oldTemp(event) {
-  event.preventDefault();
-  let fahrenheitClick = (14 * 9) / 5 + 32;
-  let degrees = document.querySelector("#new-temp");
-  degrees.innerHTML = Math.round(fahrenheitClick);
-}
-let wink = document.querySelector(".fancyThree");
-wink.addEventListener("click", oldTemp);
+let fahrenheitTemp = null;
 
 function searchLocation(position) {
   let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
