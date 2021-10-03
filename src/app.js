@@ -103,6 +103,14 @@ link.addEventListener("click", newTemp);
 
 let fahrenheitTemp = null;
 
+function oldTemp(event) {
+event.preventDefault();
+let fahrenheitDegrees = document.querySelector("#new-temp");
+fahrenheitDegrees.innerHTML = Math.round(fahrenheitTemp);
+
+let wink = document.querySelector(".fancyThree")
+wink.addEventListener("click", oldTemp)
+
 function searchLocation(position) {
   let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
   let lat = position.coords.latitude;
