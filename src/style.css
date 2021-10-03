@@ -98,7 +98,7 @@ h5 {
   left: 0;
   font-size: 13px;
   font-weight: 400;
-  color: black;
+  color: white;
 }
 .fancyTwo {
   position: relative;
@@ -112,6 +112,7 @@ h5 {
   left: 0;
   font-size: 13px;
   font-weight: 400;
+  color: white;
 }
 .location {
   position: fixed;
@@ -186,11 +187,11 @@ h5 {
 }
 
 .active {
-  color: white;
+  color: black;
   cursor: default;
   text-decoration: none;
 }
 .active:hover {
   text-decoration: none;
-  color: white;
+  color: black;
 }
