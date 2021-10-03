@@ -95,21 +95,23 @@ dorm.addEventListener("submit", research);
 function newTemp(event) {
   event.preventDefault();
   let celsiusClick = ((fahrenheitTemp - 32) * 5) / 9;
-  let celsiusTemp = document.querySelector("#new-temp");
-  celsiusTemp.innerHTML = Math.round(celsiusClick);
+  let temperature = document.querySelector("#new-temp");
+  temperature.innerHTML = Math.round(celsiusClick);
 }
-let link = document.querySelector(".fancy");
-link.addEventListener("click", newTemp);
+
+function oldTemp(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#new-temp");
+  temperature.innerHTML = Math.round(fahrenheitTemp);
+}
 
 let fahrenheitTemp = null;
 
-function oldTemp(event) {
-event.preventDefault();
-let fahrenheitDegrees = document.querySelector("#new-temp");
-fahrenheitDegrees.innerHTML = Math.round(fahrenheitTemp);
+let link = document.querySelector(".fancy");
+link.addEventListener("click", newTemp);
 
-let wink = document.querySelector(".fancyThree")
-wink.addEventListener("click", oldTemp)
+let wink = document.querySelector(".fancyThree");
+wink.addEventListener("click", oldTemp);
 
 function searchLocation(position) {
   let apiKey = "dd7b4743f092d8d584d793818a1a33ef";
