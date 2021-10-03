@@ -101,8 +101,9 @@ link.addEventListener("click", newTemp);
 
 function oldTemp(event) {
   event.preventDefault();
-  let degrees = document.querySelector("#new-temp");
-  degrees.innerHTML = `80`;
+  let fahrenheitClick = (14 * 9) / 5 + 32;
+  let degrees = document.querySelector("#fahrenheit");
+  degrees.innerHTML = fahrenheitClick;
 }
 let wink = document.querySelector(".fancyThree");
 wink.addEventListener("click", oldTemp);
