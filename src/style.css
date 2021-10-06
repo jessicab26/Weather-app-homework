@@ -151,29 +151,7 @@ h5 {
   left: 0;
   font-size: 12px;
 }
-.week-days {
-  position: relative;
-  bottom: 0;
-  margin-top: 120px;
-  margin-right: 20px;
-  font-size: 18px;
-  text-align: center;
-  color: black;
 
-  padding-top: 5px;
-  padding-bottom: 30px;
-  margin-bottom: 50px;
-  margin-left: 15px;
-}
-.week-days .emoji {
-  position: relative;
-  font-size: 16px;
-  margin-left: 20px;
-}
-.week-days .degrees {
-  font-size: 15px;
-  color: black;
-}
 .name {
   color: black;
   font-size: 12px;
@@ -194,4 +172,22 @@ h5 {
 .active:hover {
   text-decoration: none;
   color: black;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: 18px;
+  color: white;
+}
+.forecast-temperature {
+  font-size: 15px;
+  color: white;
+}
+
+.weather-forecast-min {
+  opacity: 0.7;
 }
