@@ -42,6 +42,30 @@ h3.innerHTML = day;
 h4.innerHTML = month + " " + number;
 h5.innerHTML = hours + " " + minutes;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="forecast-date">${day}</div>
+      <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="45" />
+      <div class="forecast-temperature">
+        <span class="weather-forecast-max">18°</span>
+        <span class="weather-forecast-min">12°</span>
+    </div>
+    </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   let icon = document.querySelector("#icon");
   fahrenheitTemp = response.data.main.temp;
@@ -137,3 +161,4 @@ let currentLocationButton = document.querySelector("#current-area");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("New Orleans");
+displayForecast();
