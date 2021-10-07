@@ -179,7 +179,10 @@ h5 {
   font-size: 15px;
   color: white;
 }
+.weather-forecast-max {
+  font-weight: 600;
+}
 
 .weather-forecast-min {
-  opacity: 0.7;
+  opacity: 0.8;
 }
