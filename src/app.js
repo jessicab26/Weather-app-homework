@@ -103,10 +103,6 @@ function displayWeatherCondition(response) {
     Math.round(response.data.wind.speed) + "mph";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#high").innerHTML =
-    Math.round(response.data.main.temp_max) + "℉";
-  document.querySelector("#low").innerHTML =
-    Math.round(response.data.main.temp_min) + "℉";
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
