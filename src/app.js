@@ -119,7 +119,7 @@ function searchCity(city) {
 }
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-new-city").value;
+  let city = document.querySelector("#submit-city").value;
   searchCity(city);
 }
 
