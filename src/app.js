@@ -124,8 +124,7 @@ function handleSubmit(event) {
 }
 
 let form = document.querySelector("#search-new-city");
-form.addEventListener("click", handleSubmit);
-form.addEventListener("mouseenter", handleSubmit);
+form.addEventListener("submit", handleSubmit);
 
 function research(event) {
   event.preventDefault();
@@ -135,8 +134,7 @@ function research(event) {
   p.innerHTML = `Now showing weather for....`;
 }
 let dorm = document.querySelector("#search-new-city");
-dorm.addEventListener("click", research);
-dorm.addEventListener("mouseenter", research);
+dorm.addEventListener("submit", research);
 
 function newCelsiusTemp(event) {
   event.preventDefault();
