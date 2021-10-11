@@ -119,11 +119,11 @@ function searchCity(city) {
 }
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#submit-city").value;
+  let city = document.querySelector("#search-new-city").value;
   searchCity(city);
 }
 
-let form = document.querySelector("#search-new-city");
+let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 function research(event) {
