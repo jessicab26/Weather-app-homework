@@ -133,7 +133,7 @@ function research(event) {
   let p = document.querySelector("p");
   p.innerHTML = `Now showing weather for....`;
 }
-let dorm = document.querySelector("#search-new-city");
+let dorm = document.querySelector("#search-form");
 dorm.addEventListener("submit", research);
 
 function newCelsiusTemp(event) {

@@ -46,7 +46,7 @@ h5 {
   position: fixed;
   right: 0;
   margin-right: 59px;
-  margin-top: 47px;
+  margin-top: 50px;
   font-family: "Besley", serif;
   font-weight: 400;
   font-size: 34px;
@@ -59,7 +59,7 @@ h5 {
   margin-right: 60px;
   color: black;
   font-size: 18px;
-  margin-top: 48px;
+  margin-top: 54px;
 }
 .day {
   position: relative;
@@ -115,12 +115,13 @@ h5 {
   position: fixed;
   right: 0;
   margin-right: 67px;
-  margin-top: 50px;
+  margin-top: 45px;
+  max-width: 225px;
 }
 .button {
   position: fixed;
   right: 0;
-  margin-top: 62px;
+  margin-top: 70px;
   margin-right: 150px;
   background: #01abb1;
   color: white;
@@ -128,7 +129,7 @@ h5 {
 .buttonTwo {
   position: fixed;
   right: 0;
-  margin-top: 62px;
+  margin-top: 70px;
   margin-right: 68px;
   background: green;
   color: white;
